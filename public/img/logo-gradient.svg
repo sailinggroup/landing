@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 262144 262144"
+   version="1.1"
+   id="svg2"
+   width="262144"
+   height="262144"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient2">
+      <stop
+         style="stop-color:#ff3937;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#ff3799;stop-opacity:1;"
+         offset="0.45350316"
+         id="stop4" />
+      <stop
+         style="stop-color:#ff9d37;stop-opacity:1;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="338.61447"
+       y1="-55.772465"
+       x2="133.32799"
+       y2="576.03442"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <path
+     d="M 0,0 H 512 V 512 H 0 Z"
+     fill="#000000"
+     fill-opacity="0"
+     id="path1" />
+  <g
+     class=""
+     id="g2">
+    <path
+       d="m 238,20 v 16.79 c 4.8,-0.32 9.6,-0.53 14.3,-0.6 7.3,-0.11 14.5,0.1 21.7,0.57 V 20 Z m 19,33.94 h -4.6 c -24.3,0.39 -48,4.63 -79.2,12.5 -0.4,13.8 -1.8,27.47 -3.9,42.43 69.7,-18.43 109.6,-18.78 175.1,-0.1 -2,-15.74 -8.3,-28.86 -16,-44.46 C 302.7,57.6 280.2,54.04 257,53.94 Z m 0.3,58.26 c -6.4,0.1 -12.8,0.4 -19.3,1 v 19 c 9,-0.7 17.7,-1.1 26.3,-1.1 3.3,0 6.5,0 9.7,0.1 v -18.3 c -5.6,-0.5 -11.1,-0.7 -16.7,-0.7 z m 6.8,36.6 c -32.8,0.2 -68.7,5.7 -114.9,16.4 -0.8,109 -25,203.2 -60.32,288.3 C 195.1,429.3 331.3,429.2 432.6,454.8 420,316.2 403.3,252.1 364.5,163.9 328.1,153.9 297.4,148.7 264.1,148.8 Z M 103,164.7 v 18 h 27.9 c 0.2,-6 0.3,-12 0.4,-18 z m 281.5,0 c 2.6,6.1 5.1,12.1 7.6,18 H 409 v -18 z M 46,423 v 18 h 28.76 c 2.42,-6 4.79,-12 7.09,-18 z m 401.7,0 c 0.6,5.9 1.2,11.9 1.8,18 H 468 v -18 z m -187.4,30.6 c -7.4,0 -14.9,0.1 -22.3,0.3 v 38.3 h 36 v -38.5 c -4.6,0 -9.1,-0.1 -13.7,-0.1 z"
+       fill="#ffffff"
+       fill-opacity="1"
+       id="path2"
+       style="fill:url(#linearGradient3);fill-opacity:1" />
+  </g>
+</svg>

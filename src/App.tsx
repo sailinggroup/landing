@@ -35,8 +35,8 @@ const App: Component = () => {
     {
       name: 'Technonyte',
       rank: 'Navigator',
-      link: 'https://techo.pics',
-      linkText: 'techo.pics',
+      link: 'https://techno.pics',
+      linkText: 'techno.pics',
       image: 'https://techno.pics/logo.png',
       description: 'Owns VAPOR, a very successful website and a discord with over 1.5k members'
     }

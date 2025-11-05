@@ -997,3 +997,105 @@ body {
     font-size: 2.5rem;
   }
 }
+
+/* Discord Banner */
+.discord-banner {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #5865F2 0%, #7289DA 100%);
+  color: white;
+  padding: 16px 28px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 8px 30px rgba(88, 101, 242, 0.4);
+  z-index: 1000;
+  transform: translateX(400px) rotate(-8deg);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.discord-banner.visible {
+  transform: translateX(0) rotate(-5deg);
+  opacity: 1;
+  animation: discordBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+             discordSwish 3s ease-in-out 0.8s infinite;
+}
+
+.discord-banner:hover {
+  transform: translateX(0) rotate(0deg) scale(1.08);
+  box-shadow: 0 12px 40px rgba(88, 101, 242, 0.6);
+  animation: discordSwish 3s ease-in-out infinite;
+}
+
+.discord-banner i {
+  font-size: 1.5rem;
+  animation: discordPulse 2s ease-in-out infinite;
+}
+
+@keyframes discordBounce {
+  0% {
+    transform: translateX(400px) rotate(-8deg) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-15px) rotate(-3deg) scale(1.05);
+  }
+  80% {
+    transform: translateX(8px) rotate(-6deg) scale(0.98);
+  }
+  100% {
+    transform: translateX(0) rotate(-5deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes discordSwish {
+  0%, 100% {
+    transform: translateX(0) rotate(-5deg);
+  }
+  25% {
+    transform: translateX(-3px) rotate(-6deg);
+  }
+  50% {
+    transform: translateX(0) rotate(-4deg);
+  }
+  75% {
+    transform: translateX(3px) rotate(-6deg);
+  }
+}
+
+@keyframes discordPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@media (max-width: 768px) {
+  .discord-banner {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .discord-banner span {
+    display: none;
+  }
+  
+  .discord-banner i {
+    font-size: 1.8rem;
+  }
+}

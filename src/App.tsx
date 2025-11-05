@@ -12,6 +12,7 @@ const App: Component = () => {
   const [animAlt, setAnimAlt] = createSignal(false); // toggle to force CSS animation restart
   const [playedCards, setPlayedCards] = createSignal<number[]>([0]); // Track which cards have been played
   const [lastActiveIndex, setLastActiveIndex] = createSignal<number | null>(null); // track previously active card
+  const [showDiscordBanner, setShowDiscordBanner] = createSignal(false);
   let autoRotateInterval: number;
 
   const crewMembers = [
@@ -82,6 +83,12 @@ const App: Component = () => {
     // initial active card pose
     pickActivePose();
 
+    // Scroll listener for Discord banner
+    const handleScroll = () => {
+      setShowDiscordBanner(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+
     // Auto-rotate every 5 seconds
     autoRotateInterval = window.setInterval(() => {
       if (!isAnimating()) {
@@ -97,6 +104,10 @@ const App: Component = () => {
         setTimeout(() => setIsAnimating(false), 800);
       }
     }, 5000);
+
+    onCleanup(() => {
+      window.removeEventListener('scroll', handleScroll);
+    });
   });
 
   onCleanup(() => {
@@ -276,6 +287,17 @@ const App: Component = () => {
           </div>
         </div>
       </div>
+
+      {/* Discord Banner */}
+      <a
+        href="https://discord.gg/87CqJeQz2Z"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={`discord-banner ${showDiscordBanner() ? 'visible' : ''}`}
+      >
+        <i class="fa-brands fa-discord"></i>
+        <span>Join Our Discord</span>
+      </a>
     </>
   )
 }

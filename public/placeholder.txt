@@ -1,0 +1,1 @@
+Public folder for static assets (images, icons). Place UBG assets here if needed.

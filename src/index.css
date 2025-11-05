@@ -1022,6 +1022,7 @@ body {
   cursor: pointer;
   border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
+  animation: none;
 }
 
 .discord-banner.visible {
@@ -1029,6 +1030,10 @@ body {
   opacity: 1;
   animation: discordBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
              discordSwish 3s ease-in-out 0.8s infinite;
+}
+
+.discord-banner:not(.visible) {
+  animation: discordSlideOut 0.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
 }
 
 .discord-banner:hover {
@@ -1080,6 +1085,17 @@ body {
   }
   50% {
     transform: scale(1.15);
+  }
+}
+
+@keyframes discordSlideOut {
+  0% {
+    transform: translateX(0) rotate(-5deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(400px) rotate(-8deg) scale(0.9);
+    opacity: 0;
   }
 }
 
